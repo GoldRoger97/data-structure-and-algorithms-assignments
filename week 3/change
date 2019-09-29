@@ -1,0 +1,19 @@
+import java.util.Scanner;
+
+public class Change {
+    public static int getChange(int m)
+    {
+        int count = m / 10;
+        m = m % 10;
+        count += m / 5;
+        m = m % 5;
+        count += m / 1;
+        return count;
+    }
+    public static void main(String[] args) {
+        Scanner sn = new Scanner(System.in);
+        int n = sn.nextInt();
+        System.out.println(getChange(n));
+    }
+}
+
